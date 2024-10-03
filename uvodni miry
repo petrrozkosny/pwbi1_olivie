@@ -26,8 +26,8 @@ MEASURE data[05 suma srazek mesic 7]= SUMX(FILTER(data,data[mesic]= 7),data[sraz
 MEASURE data[06 suma srazek mosnov] = SUMX(FILTER(data,data[lokalita] = "MOSNOV"),data[srazky])
 MEASURE data[07 suma srazek mesic 1] = SUMX(FILTER(data,data[mesic]= 1),data[srazky])
 MEASURE data[08 suma srazek mesic 1 ruzyne] = SUMX(FILTER(data,data[mesic]= 1 && data[lokalita]= "RUZYNE"),data[srazky])
-MEASURE data[09 suma srazek mesic 8 mosnov] = SUMX(FILTER(data,data[mesic]= 7 || data[mesic] = 8),data[srazky])
-MEASURE data[10 suma srazek mesice 7 8] = SUMX(FILTER(data,data[mesic]= 8 && data[lokalita]= "MOSNOV"),data[srazky])
+MEASURE data[09 suma srazek mesice 7 8] = SUMX(FILTER(data,data[mesic]= 7 || data[mesic] = 8),data[srazky])
+MEASURE data[10 suma srazek mosnov mesic 8 ] = SUMX(FILTER(data,data[mesic]= 8 && data[lokalita]= "MOSNOV"),data[srazky])
 
 MEASURE data[11 suma srazek vsechny roky] = SUMX(ALL(data),data[srazky])
 MEASURE data[12 suma srazek vsechny roky] = SUMX(ALL(data),data[srazky])
