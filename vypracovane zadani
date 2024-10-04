@@ -4,7 +4,7 @@
 MEASURE data[cv01 suma srazek mesic 1] = SUMX(FILTER(data,data[mesic] = 1),data[srazky])
 MEASURE data[cv02 suma srazek ruzyne] = SUMX(FILTER(data,data[lokalita] = "RUZYNE"),data[srazky])
 MEASURE data[cv03 suma srazek ruzyne mesic 1] = SUMX(FILTER(data,data[lokalita] = "RUZYNE" && data[mesic] = 1),data[srazky])
-MEASURE data[cv04 suma srazek mesic 1 2] = SUMX(FILTER(data,data[mesic] = 1 && data[mesic] = 2),data[srazky])
+MEASURE data[cv04 suma srazek mesic 1 2] = SUMX(FILTER(data,data[mesic] = 1 || data[mesic] = 2),data[srazky])
 MEASURE data[cv05 suma srazek posledni mesic] = SUMX(FILTER(data,data[mesic] =MAX(data[mesic])),data[srazky])
 
 -- ==================== CVICENI FILTER ALL ============================
